@@ -1,0 +1,6 @@
+mesos (0.22.0-1) UNRELEASED; urgency=low
+
+  * Initial release. Closes: #nnnn
+    <nnnn is the bug number of your ITP>
+
+ -- Tomas Barton <barton.tomas@gmail.com>  Thu, 08 Jan 2015 15:11:19 +0100
