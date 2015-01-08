@@ -1,10 +1,18 @@
 Source: mesos
-Section: unknown
+Section: misc
 Priority: extra
 Maintainer: Tomas Barton <barton.tomas@gmail.com>
-Build-Depends: debhelper (>=9), dh-autoreconf, gcj, javahelper
+Build-Depends:
+  automake,
+  autoconf,
+  debhelper (>=9), dh-autoreconf,
+  libtool,
+  libunwind7|libunwind8,
+  libsasl2-dev,
+  libapr1-dev,
+  javahelper
 Standards-Version: 3.9.5
-Homepage: <insert the upstream URL, if relevant>
+Homepage: http://mesos.apache.org/
 
 Package: mesos
 Architecture: any
