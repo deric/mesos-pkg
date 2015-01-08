@@ -14,6 +14,8 @@ Build-Depends:
   libsvn-dev,
   libcurl3-dev,
   javahelper,
+  maven,
+  python-dev,
   python-setuptools
 X-Python-Version: >= 2.6
 Standards-Version: 3.9.5
