@@ -23,13 +23,17 @@ DEB_HOST_ARCH_OS = $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
 ### Package maintainers to append LDFLAGS
 #export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
+export DH_OPTIONS
+
+PYVERS := $(shell pyversions -vr)
+
 ### Java source requires these.
 export JAVA_HOME=/usr/lib/jvm/default-java
 export CLASSPATH=/usr/share/java/csv.jar:/usr/share/java/debug-disable.jar:/usr/share/java/itext.jar
 
 ### main packaging script based on dh7 syntax
 %:
-	dh $@ --with javahelper,autoreconf 
+	dh $@ --with autoreconf
 
 ### debmake generated override targets
 ### Support for -Wl,--as-needed to ltmain.sh with autoreconf -f -i
@@ -37,9 +41,9 @@ override_dh_autoreconf:
 	dh_autoreconf --as-needed
 ###
 ### Set options for ./configure
-###CONFIGURE_FLAGS = <options for ./configure>
-###overrride_dh_configure:
-###	dh_configure -- $(CONFIGURE_FLAGS)
+CONFIGURE_FLAGS = "--enable-optimize -std=c++11"
+overrride_dh_configure:
+	dh_configure -- $(CONFIGURE_FLAGS)
 ###
 ### Do not install libtool archive, python .pyc .pyo
 override_dh_install:

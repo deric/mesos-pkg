@@ -10,6 +10,8 @@ Build-Depends:
   libunwind7|libunwind8,
   libsasl2-dev,
   libapr1-dev,
+  libsvn1,
+  libcurl3-dev,
   javahelper
 Standards-Version: 3.9.5
 Homepage: http://mesos.apache.org/
