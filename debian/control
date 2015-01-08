@@ -6,15 +6,19 @@ Build-Depends:
   automake,
   autoconf,
   debhelper (>=9), dh-autoreconf,
+  default-jdk (>= 2:1.6),
   libtool,
   libunwind7|libunwind8,
   libsasl2-dev,
   libapr1-dev,
-  libsvn1,
+  libsvn-dev,
   libcurl3-dev,
-  javahelper
+  javahelper,
+  python-setuptools
+X-Python-Version: >= 2.6
 Standards-Version: 3.9.5
 Homepage: http://mesos.apache.org/
+Vcs-Git: git://git.apache.org/mesos.git
 
 Package: mesos
 Architecture: any
