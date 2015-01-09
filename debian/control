@@ -13,6 +13,7 @@ Build-Depends:
   libapr1-dev,
   libsvn-dev,
   libcurl3-dev,
+  libssl-dev,
   javahelper,
   maven,
   python-dev,
